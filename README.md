@@ -1,29 +1,30 @@
-# Instagram Business & Creator Integration for n8n
+# Instagram Business & Creator Suite for n8n
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![n8n Community Node](https://img.shields.io/badge/n8n-Community%20Node-ea4b71.svg)](https://n8n.io)
 [![Meta Graph API](https://img.shields.io/badge/Meta%20API-v26.0-0668E1.svg)](https://developers.facebook.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7+-3178C6.svg)](https://www.typescriptlang.org)
 
-A robust community integration node for **n8n** that connects directly to the **Instagram Platform via Instagram Login** (powered by Meta Graph API `v26.0`).
+An enterprise-ready **n8n** integration that connects directly to the **Instagram Platform via Instagram Login** (powered by Meta Graph API `v26.0`).
 
-Automate Instagram Professional (Business & Creator) accounts directly without requiring a linked Facebook Page.
+Automate Instagram Professional (Business & Creator) accounts directly without requiring any connected Facebook Page.
 
 ---
 
-## ⚡ Key Highlights & Capabilities
+## ⚡ Highlights & Capabilities
 
-### 🔐 Authorization Modes
-- **Instagram Business OAuth 2.0**: Standard web-based authorization flow.
-- **Direct Access Tokens**: Short-lived or 60-day extended User Access Tokens.
+### 🔐 Modern Authorization Modes
+- **Instagram Business OAuth 2.0**: Standard web-based authorization flow with custom scopes.
+- **Direct Access Tokens**: Works with short-lived or 60-day permanent User Access Tokens.
 
-### 👤 Account & Profile Lookup
-- Fetch authenticated profile information (`/me`) or look up other accounts (follower counts, media count, bio, website link).
+### 👤 Account & Profile Management
+- Fetch authenticated account data (`/me`) or look up other public accounts (followers, bio, website link, media count).
 - Retrieve account-level analytical insights.
 
-### 🚀 Media Publishing & Content Automation
-- **Single Photos**: Upload and publish single images to the feed.
-- **Videos & Reels**: Publish video posts and Instagram Reels with asynchronous status polling (`FINISHED`).
-- **Carousel Albums**: Multi-item albums supporting mixed photo and video slides (2–10 items).
+### 🚀 Content Publishing & Asset Automation
+- **Single Photos**: Publish image posts directly to the feed.
+- **Videos & Reels**: Publish short and long-form video content with automated asynchronous container status polling (`FINISHED`).
+- **Carousel Albums**: Multi-slide posts combining photos and videos (2–10 items).
 - **Stories**: Distribute photo or video Story updates.
 - **Asset Control**: Look up metadata or delete posts.
 
@@ -32,22 +33,22 @@ Automate Instagram Professional (Business & Creator) accounts directly without r
 - Post replies to comments or create top-level discussion points.
 - Moderate conversations with hide, unhide, and delete actions.
 
-### 📬 Direct Messaging
+### 📬 Direct Messaging Automation
 - Send automated direct messages to users via their Instagram-Scoped ID (IGSID).
-- Send multimedia attachments (photos, videos, audio clips, and files).
+- Send rich multimedia attachments (photos, videos, audio clips, and files).
 - Query conversation histories and active threads.
 
 ### 📈 Metrics & Analytics
-- **Account-Level**: Reach, profile views, account engagement, total interactions, follower growth, website clicks.
-- **Media-Level**: Plays, saves, shares, likes, comments, reach, and profile visits.
-- **Query Modes**: Fetch all metrics or specify individual metrics.
+- **Account Metrics**: Reach, profile views, account engagement, total interactions, follower growth, website clicks.
+- **Media Metrics**: Plays, saves, shares, likes, comments, reach, and profile visits.
+- **Query Modes**: Fetch all metrics or select specific data points.
 
 ### 🧠 Autonomous AI Agent Tooling
-- Integrates directly with n8n **AI Agent** nodes as a connected Tool.
+- Connects directly to n8n **AI Agent** nodes as a specialized tool sub-node.
 - Allows AI agents to browse profiles, moderate comments, broadcast messages, publish posts, and pull analytical data on demand.
 
 ### 🌐 Direct Graph API Access
-- Execute custom HTTP requests (GET, POST, DELETE) to any Meta Graph API `v26.0` endpoint with automated token handling.
+- Execute custom HTTP requests (GET, POST, DELETE) to any Meta Graph API `v26.0` endpoint with automated authentication.
 
 ---
 
@@ -57,7 +58,7 @@ To configure OAuth2 in n8n, obtain your credentials from the Meta App Dashboard:
 
 ### 1. Create a Meta Developer Application
 1. Sign in to the [Meta for Developers Portal](https://developers.facebook.com/apps).
-2. Click **Create App** and choose **Business** or **Other**.
+2. Click **Create App** and select **Business** or **Other**.
 
 ### 2. Enable Instagram Business Login
 1. In the app dashboard, navigate to **Use Cases** or **Add Product**.
@@ -99,15 +100,15 @@ To configure OAuth2 in n8n, obtain your credentials from the Meta App Dashboard:
 3. Click **Install a community node**.
 4. Enter the package name:
    ```text
-   n8n-nodes-instagram-api
+   n8n-nodes-instagram-business
    ```
 5. Accept the prompt and click **Install**.
 
 ### Method B: Local Development / Manual Build
 ```bash
 # Clone the repository
-git clone <your-repository-url>
-cd n8n-nodes-instagram-api
+git clone https://github.com/Emanyahyadev/n8n-nodes-instagram-business.git
+cd n8n-nodes-instagram-business
 
 # Install dependencies and build
 npm install
@@ -119,7 +120,7 @@ npm link
 
 In your local n8n custom directory:
 ```bash
-npm link n8n-nodes-instagram-api
+npm link n8n-nodes-instagram-business
 ```
 
 ---
@@ -143,7 +144,7 @@ npm link n8n-nodes-instagram-api
 ## 📁 Project Structure
 
 ```text
-n8n-nodes-instagram-api/
+n8n-nodes-instagram-business/
 ├── credentials/
 │   ├── InstagramApi.credentials.ts        # Access Token configuration
 │   ├── InstagramOAuth2Api.credentials.ts  # OAuth2 flow configuration

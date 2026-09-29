@@ -1,17 +1,23 @@
 {
-  "name": "n8n-nodes-instagram-api",
-  "version": "0.2.4",
-  "description": "Community node for n8n integrating Instagram Business Login & Meta Graph API with AI Agent tool support",
+  "name": "n8n-nodes-instagram-business",
+  "version": "1.0.0",
+  "description": "Enterprise-grade n8n community node for Instagram Business Login & Graph API v26.0 with AI Agent automation",
+  "homepage": "https://github.com/Emanyahyadev/n8n-nodes-instagram-business",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Emanyahyadev/n8n-nodes-instagram-business.git"
+  },
   "keywords": [
     "n8n-community-node-package",
     "n8n",
     "instagram",
+    "instagram-business",
     "instagram-api",
     "instagram-login",
     "meta",
-    "business-login",
-    "ai-tool",
-    "ai-agent"
+    "graph-api",
+    "ai-agent",
+    "workflow-automation"
   ],
   "license": "MIT",
   "main": "dist/index.js",
